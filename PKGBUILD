@@ -1,18 +1,18 @@
 # Maintainer: Ondrej Vlach <ondrej@vlach.xyz>
 
 pkgname=wofipassmenu
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc="Wofi based implementation of passmenu"
 arch=('any')
 url='https://github.com/ovlach/wofipassmenu'
-license=('GPLv2')
-depends=(pass wofi bash)
+license=('GPL2')
+depends=(pass wofi bash wl-clipboard)
 makedepends=()
 provides=('wofipassmenu')
 conflicts=('wofipassmenu')
-source=('https://github.com/ovlach/wofipassmenu/archive/v0.0.1.tar.gz')
-md5sums=('fca6d2cbff21cf63bfccdf53fa487fca')
+source=("${pkgname}${pkgver}.tar.gz::https://github.com/ovlach/wofipassmenu/archive/v0.0.2.tar.gz")
+md5sums=('41d084df6980d9af2a3414d69e35f69e')
 
 package() {
 	  cd "$srcdir"
